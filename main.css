@@ -1,0 +1,126 @@
+/** Total reset **/
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background: linear-gradient(90deg, rgba(255,184,200,1) 0%, rgba(216,200,216,1) 35%, rgba(173,214,232,1) 100%);
+}
+
+main
+{
+    background-color: white;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1%;
+}
+
+h1
+{
+    padding-top: 1%;
+    text-align: center;
+}
+
+
+label, input, textarea
+{
+    margin-left: 2.5%;
+    width: 95%;
+}
+
+input
+{
+    margin-bottom: 1%;
+}
+
+input[type=text]:focus
+{
+
+    outline: solid 1px hotpink;
+}
+
+input[type=email]:focus, textarea:focus
+{
+    outline: solid 1px blue;
+}
+
+.email, .information
+{
+    padding-top: 1%;
+}
+
+label, textarea, button
+{
+    display: block;
+}
+
+div
+{
+    width: 95%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+p
+{
+    display: inline-block;
+}
+
+button
+{
+    background-color: white;
+    border: 1px solid black;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* magic slider */
+#question 
+{
+    display: none;
+}
+
+.checkboxQuestion
+{
+    display: inline-block;
+    width: 40px;
+    height: 23px;
+    background-color: lightgray;
+    position: relative;
+    border-radius: 50px;
+    transition: 1s;
+}
+
+.checkboxQuestion::before 
+{
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+#question:checked + .checkboxQuestion
+{
+    background-color: blue;
+}
+
+#question:checked + .checkboxQuestion::before 
+{
+    left: 22px;
+}
